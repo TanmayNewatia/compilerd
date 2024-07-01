@@ -28,48 +28,6 @@ export const languageOptions = [
     "defaultCode": "PRINT \"Hello, World!\""
   },
   {
-    "id": 75,
-    "name": "C (Clang 7.0.1)",
-    "label": "C (Clang 7.0.1)",
-    "value": "c",
-    "defaultCode": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}"
-  },
-  {
-    "id": 76,
-    "name": "C++ (Clang 7.0.1)",
-    "label": "C++ (Clang 7.0.1)",
-    "value": "cpp",
-    "defaultCode": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello, World!\" << std::endl;\n    return 0;\n}"
-  },
-  {
-    "id": 48,
-    "name": "C (GCC 7.4.0)",
-    "label": "C (GCC 7.4.0)",
-    "value": "c",
-    "defaultCode": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}"
-  },
-  {
-    "id": 52,
-    "name": "C++ (GCC 7.4.0)",
-    "label": "C++ (GCC 7.4.0)",
-    "value": "cpp",
-    "defaultCode": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello, World!\" << std::endl;\n    return 0;\n}"
-  },
-  {
-    "id": 49,
-    "name": "C (GCC 8.3.0)",
-    "label": "C (GCC 8.3.0)",
-    "value": "c",
-    "defaultCode": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}"
-  },
-  {
-    "id": 53,
-    "name": "C++ (GCC 8.3.0)",
-    "label": "C++ (GCC 8.3.0)",
-    "value": "cpp",
-    "defaultCode": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello, World!\" << std::endl;\n    return 0;\n}"
-  },
-  {
     "id": 50,
     "name": "C (GCC 9.2.0)",
     "label": "C (GCC 9.2.0)",
@@ -105,13 +63,6 @@ export const languageOptions = [
     "defaultCode": "IDENTIFICATION DIVISION.\nPROGRAM-ID. HelloWorld.\nPROCEDURE DIVISION.\n    DISPLAY 'Hello, World!'.\n    STOP RUN."
   },
   {
-    "id": 55,
-    "name": "Common Lisp (SBCL 2.0.0)",
-    "label": "Common Lisp (SBCL 2.0.0)",
-    "value": "lisp",
-    "defaultCode": "(format t \"Hello, World!~%\")"
-  },
-  {
     "id": 56,
     "name": "D (DMD 2.089.1)",
     "label": "D (DMD 2.089.1)",
@@ -131,13 +82,6 @@ export const languageOptions = [
     "label": "Erlang (OTP 22.2)",
     "value": "erlang",
     "defaultCode": "-module(hello).\n-export([world/0]).\n\nworld() -> io:format(\"Hello, World!~n\")."
-  },
-  {
-    "id": 44,
-    "label": "Executable",
-    "name": "Executable",
-    "value": "exe",
-    "defaultCode": "echo \"Executable code cannot be generalized.\""
   },
   {
     "id": 87,
@@ -196,13 +140,6 @@ export const languageOptions = [
     "defaultCode": "print(\"Hello, World!\")"
   },
   {
-    "id": 79,
-    "name": "Objective-C (Clang 7.0.1)",
-    "label": "Objective-C (Clang 7.0.1)",
-    "value": "objectivec",
-    "defaultCode": "#import <Foundation/Foundation.h>\n\nint main() {\n    @autoreleasepool {\n        NSLog(@\"Hello, World!\");\n    }\n    return 0;\n}"
-  },
-  {
     "id": 65,
     "name": "OCaml (4.09.0)",
     "label": "OCaml (4.09.0)",
@@ -250,13 +187,6 @@ export const languageOptions = [
     "label": "Prolog (GNU Prolog 1.4.5)",
     "value": "prolog",
     "defaultCode": ":- initialization(main).\n\nmain :- write('Hello, World!'), nl."
-  },
-  {
-    "id": 70,
-    "name": "Python (2.7.17)",
-    "label": "Python (2.7.17)",
-    "value": "python",
-    "defaultCode": "print(\"Hello, World!\")"
   },
   {
     "id": 71,
@@ -314,11 +244,4 @@ export const languageOptions = [
     "value": "typescript",
     "defaultCode": "console.log(\"Hello, World!\");"
   },
-  {
-    "id": 84,
-    "name": "Visual Basic.Net (vbnc 0.0.0.5943)",
-    "label": "Visual Basic.Net (vbnc 0.0.0.5943)",
-    "value": "vbnet",
-    "defaultCode": "Module HelloWorld\n    Sub Main()\n        Console.WriteLine(\"Hello, World!\")\n    End Sub\nEnd Module"
-  }
 ]

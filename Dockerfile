@@ -2,7 +2,37 @@ FROM docker.io/library/node:20.13.0-alpine
 
 ENV PYTHONUNBUFFERED=1
 RUN set -ex && \
-    apk add --no-cache gcc g++ musl-dev python3 openjdk17 ruby iptables ip6tables
+    apk add --no-cache \
+    gcc \
+    g++ \
+    musl-dev \
+    python3 \
+    openjdk17 \
+    ruby \
+    iptables \
+    ip6tables \
+    swift \
+    ghc \
+    rust \
+    scala \
+    typescript \
+    kotlin \
+    go \
+    lua \
+    perl \
+    php \
+    R \
+    ocaml \
+    octave \
+    fpc \
+    swi-prolog \
+    groovy \
+    gfortran \
+    elixir \
+    erlang \
+    dmd \
+    gnat \
+    cobol
 
 RUN set -ex && \
     apk add --no-cache chromium lsof

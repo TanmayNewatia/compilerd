@@ -51,6 +51,43 @@ const Home = () => {
     }
   };
 
+  const handleCompile = () => {
+    setProcessing(true);
+    const formData = {
+      language_id: language.value,
+      // encode source code in base64
+      source_code: code,
+      stdin: customInput,
+    };
+    const options = {
+      method: "POST",
+      url: process.env.NEXT_PUBLIC_URL || "http://localhost:4000/api/execute",
+      params: { base64_encoded: "true", fields: "*" },
+      headers: {
+        "content-type": "application/json",
+        "Content-Type": "application/json"
+      },
+      data: formData,
+    };
+
+    axios
+      .request(options)
+      .then(function (response) {
+        console.log("res.data", response.data);
+        setOutputDetails(response.data.output);
+        showSuccessToast(`Compiled Successfully!`);
+        console.log("response.data", response.data);
+      })
+      .catch((err) => {
+        let error = err.response ? err.response.data : err;
+        // get error status
+        let status = err.response.status;
+        console.log("status", status);
+        setProcessing(false);
+        console.log("catch block...", error);
+      });
+  };
+
   function handleThemeChange(th) {
     const theme = th;
     if (["light", "vs-dark"].includes(theme.value)) {

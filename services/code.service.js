@@ -395,7 +395,7 @@ const _getAiScore = async (langConfig, question, response, points, userAnswer, r
 
 const _executeStatement = (db, sql) => {
     return new Promise((resolve, reject) => {
-        db.all(sql, function(err, rows) {
+        db.all(sql, function (err, rows) {
             if (err) {
                 reject(err);
             } else {
@@ -834,9 +834,9 @@ const _executeMultiFile = async (req, res, response) => {
 
     try {
         let jasmineResults
-        if(req?.non_editable_files) {
+        if (req?.non_editable_files) {
             const isValidSubmission = await _checkIntegrity(req.non_editable_files)
-            if(!isValidSubmission) throw new Error(`A non editable file has been modified, exiting...`)
+            if (!isValidSubmission) throw new Error(`A non editable file has been modified, exiting...`)
         }
         if (req.type === FRONTEND_STATIC_JASMINE) {
             const staticServerInstance = await _startStaticServer(appConfig.multifile.staticServerPath)
